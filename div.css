@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+
+
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(rgb(2, 41, 57), #ffffff);
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.6s;
+    align-items: center;
+    z-index: 10000;
+}
+header.sticky{
+    padding: 5px 100px;
+    background:rgba(247,237,230,1.0);
+}
+
+header .logo
+{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header .logo img{
+    width: 200px;
+    display: inline-block;
+    transition: 0.6s;
+}
+header.sticky .logo img{
+    width: 150px;
+    margin-left: 100px;
+    margin-top: 15px;
+    transition: 0.6s;
+}
+header #menuBtn{
+    display: none;
+}
+header .menuBtn{
+    font-size: 2rem;
+    color: #e8e6e6;
+    float: right;
+    margin-left: 15px;
+    line-height: 80px;
+    display: none;
+}
+header ul
+{
+    float: right;
+    margin-right: 2rem;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+    display: inline-block;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: rgba(247,237,230,1);
+    border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: rgba(247,237,230,0);
+    color: #f7ede6;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid #f7ede6;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+}
+
+header.sticky .logo{
+    color: black;
+}
+header.sticky ul li a.active{
+    background: rgba(247,237,230,0);
+    color: #85522d;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid #85522d;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+}
+header.sticky ul li a:hover{
+    background: rgba(247,237,230,0);
+    color: #85522d;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid #85522d;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+}
+header.sticky ul li a{
+    color: #85522d;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+    background: linear-gradient(to top, #69462e,transparent);
+    z-index: 1000;
+
+}
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon
+{
+    mix-blend-mode: screen;
+    overflow: hidden;
+}
+section img#mountains_front
+{
+    z-index: 9;
+}
+section img#mountains_behind
+{
+    z-index: 9;
+}
+#text{
+    position: absolute;
+    color: rgba(247,237,230,1);
+    text-align: center;
+    top: 150px;
+    font-family: Georgia;
+    white-space:nowrap ;
+    font-size: 5.5vw;
+    z-index: 9;
+    font-weight: 400;
+}
+#text small{
+    font-family: Georgia;
+    font-size: 3vw;
+}
+#btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background:rgba(247,237,230,1.0);
+    color: rgba(133,82,46,1);
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+.container1{
+    background-image: url("https://petekpastane.com.tr/image/catalog/villa-banner2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 10px;
+    display: flex;
+}
+.browncolon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 150px;
+}
+.description{
+    flex-basis: 80%;
+    position: relative;
+    margin-left: 50px;
+}
+.description h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 54px;
+    color: rgba(247,237,230,1);
+}
+.description p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 30px 0;
+    color: rgba(232,208,190,1);
+}
+.description a{
+    border-radius: 25px;
+    border: 2px solid #e8d0be;
+    color: #e8d0be;
+    padding: 20px;
+    width: 120px;
+    height: 70px;
+    text-decoration: none;
+    float: right;
+}
+
+.container2{
+    background-image: url("https://petekpastane.com.tr/image/catalog/villa-banner3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 10px;
+    display: flex;
+}
+.greencolon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 150px;
+}
+.greencolon img{
+    width: 700px;
+    margin-top: -20px;
+}
+.description2{
+    flex-basis: 45%;
+    position: relative;
+    margin-left: 0px;
+}
+.description2 h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 54px;
+    color: rgba(176,209,130,1);
+}
+.description2 p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    width: 50%;
+    font-weight: 300;
+    margin: 30px 0;
+    color: rgba(247,249,234,1);
+}
+
+.container3{
+    background-image: url("https://petekpastane.com.tr/image/catalog/villa-banner5.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 20px;
+    display: flex;
+}
+.whitecolon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 150px;
+}
+.description3{
+    flex-basis: 45%;
+    position: relative;
+    margin-left: 0px;
+}
+.description3 h1{
+    color: rgba(133,82,46,1);
+    font-weight: 700;
+}
+.description3 p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    width: 50%;
+    font-weight: 400;
+    margin: 30px 0;
+    color: rgba(161,102,59,1);
+}
+form{
+    width: 70%;
+}
+.first{
+    display: flex;
+}
+.name{
+    padding: 10px;
+}
+.surname{
+    padding: 10px;
+}
+.second{
+    display: flex;
+}
+.email{
+    padding: 10px;
+}
+.number{
+    padding: 10px;
+}
+.desc{
+    padding: 10px;
+}
+.input{
+    border:2px solid #85522d;
+    border-radius: 0px;
+}
+#buton
+{
+    text-decoration: none;
+    padding: 10px;
+    width: 50%;
+    float: right;
+    border-radius: 0px;
+    background:rgba(247,237,230,1.0);
+    color: rgba(133,82,46,1);
+    font-size: 1.5em;
+    z-index: 9;
+    border-color: #85522d;
+}
+
+
+
+footer{
+    background-color:black;
+    height: 200px;
+    overflow: hidden;
+}
+footer h2{
+    margin-top: 50px;
+    background-color: black;
+    text-align: center;
+    color: #fff;
+}
+footer ul
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+footer ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.carousel{
+    width: 100%;
+    height: 110vh;
+    padding:100px;
+    margin-top: -50px;
+    align-items: center;
+    margin-bottom: -50px;
+}
+
+
+
+
+/*tablet modu */
+
+
+@media only screen and (max-width:1100px){
+    header
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 100px;
+        display: flex;
+        justify-content: space-between;
+        transition: 0.6s;
+        align-items: center;
+        z-index: 10000;
+    }
+    header.sticky{
+        padding: 0px 100px;
+        background:rgba(247,237,230,1.0);
+    }
+    header .logo{
+        margin-left: 0px;
+        font-size: 250%;
+    }
+    header ul{
+        margin-left: -100px;
+        position: fixed;
+        background: rgba(161,102,59,0.7);
+        width: 100%;
+        height: calc(100vh - 40px);
+        top: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+        left: -100%;
+    }
+    header .menuBtn{
+        display: initial;
+    }
+    header.sticky .menuBtn{
+        color: #85522d;
+    }
+
+    header ul li{
+        display: block;
+        min-width: 80%;
+        text-align: center;
+        line-height: 6rem;
+    }
+    header ul li a{
+        display: block;
+        font-size: 1.2rem;
+        border-radius: 0px;
+    }
+    header ul li a:hover,
+    header ul li a.active{
+        background: rgba(255,255,255,0.2);
+        color: white;
+    }
+    header.sticky ul li a{
+        color: white;
+    }
+    header.sticky ul li a.active{
+        background: rgba(255,255,255,0.0);
+        color: white;
+    }
+    header.sticky ul li a:hover{
+        background: rgba(255,255,255,0.2);
+        color: white;
+    }
+    header.sticky .logo img{
+        width: 200px;
+        margin-left: 0px;
+        margin-top: 5px;
+        transition: 0.6s;
+    }
+    section img#moon{
+        margin-top: 50px;
+        width: 100%;
+        height: 80%;
+    }
+    section img#stars
+    {
+        margin-top: 0px;
+        height: 100%;
+    }
+
+    section img#mountains_behind{
+        height: 100%;
+        margin-top: 0px;
+    }
+    section img#mountains_front
+    {
+        height: 100%;
+        margin-top: 0px;
+        z-index: 9;
+    }
+    #text{
+        font-size: 80px;
+
+    }
+
+    footer ul
+    {
+        margin-top: -60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header #menuBtn:checked ~ ul{
+        left: 0;
+        margin-left: 0px;
+    }
+    .carousel{
+        width: 100%;
+        height: 80vh;
+        padding: 10px;
+        align-items: center;
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width:880px) {
+    #text{
+        font-size: 50px;
+
+    }
+    .carousel{
+        width: 100%;
+        height: 28vh;
+        padding: 10px;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+}
+
